@@ -1,16 +1,26 @@
-body {
+* {
     margin: 0;
-    font-family: Arial, sans-serif;
+    padding: 0;
+    box-sizing: border-box;
   }
   
+  body {
+    font-family: Arial, sans-serif;
+    padding-top: 70px; /* Space for fixed navbar */
+  }
+  
+  /* Navbar Styles */
   .navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: black;
-    padding: 1rem;
-    color: white;
-    position: relative;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
   }
   
   .logo {
@@ -19,7 +29,7 @@ body {
   
   .nav-links {
     display: flex;
-    gap: 20px;
+    gap: 1rem;
   }
   
   .nav-links a {
@@ -27,49 +37,63 @@ body {
     text-decoration: none;
   }
   
-  /* Burger styles */
   .burger {
     display: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     cursor: pointer;
   }
   
-  /* Flexbox content */
-  .main-content {
+  /* Responsive image */
+  .main-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  /* Card Layout */
+  .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 20px;
-    gap: 20px;
+    gap: 1rem;
+    padding: 1rem 2rem;
   }
   
-  .box {
-    background: lightblue;
-    padding: 20px;
+  .card {
     flex: 1 1 30%;
-    min-width: 250px;
-    text-align: center;
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   }
   
-  /* Mobile Styles */
+  /* Media Queries */
   @media (max-width: 768px) {
-    .burger {
-      display: block;
-    }
-  
     .nav-links {
       display: none;
       flex-direction: column;
+      background-color: #333;
       position: absolute;
       top: 60px;
-      right: 20px;
-      background: #222;
-      padding: 10px;
-      border-radius: 5px;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
     }
   
     .nav-links.nav-active {
       display: flex;
+    }
+  
+    .burger {
+      display: block;
+    }
+  
+    .cards {
+      flex-direction: column;
+    }
+  
+    .card {
+      flex: 1 1 100%;
     }
   }
   

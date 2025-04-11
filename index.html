@@ -1,20 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Responsive Navbar</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Layout</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header class="navbar">
     <h1 class="logo">MySite</h1>
-    
-    <!-- Burger Menu Icon -->
-    <div class="burger" id="burger">
-      ☰
-    </div>
-
+    <div class="burger" id="burger">☰</div>
     <nav class="nav-links" id="navLinks">
       <a href="#">Home</a>
       <a href="#">About</a>
@@ -24,9 +20,13 @@
   </header>
 
   <main class="main-content">
-    <section class="box">Box 1</section>
-    <section class="box">Box 2</section>
-    <section class="box">Box 3</section>
+    <img src="images/Sithole1.jpg" alt="Profile" class="main-image" />
+
+    <section class="cards">
+      <div class="card">I love building responsive websites that adapt beautifully across devices.</div>
+      <div class="card">Using Flexbox and Grid, I structure modern, clean layouts with ease.</div>
+      <div class="card">Whether you're on mobile, tablet, or desktop, it always looks good!</div>
+    </section>
   </main>
 
   <script>
@@ -37,5 +37,6 @@
       navLinks.classList.toggle('nav-active');
     });
   </script>
+
 </body>
 </html>
